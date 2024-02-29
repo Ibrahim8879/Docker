@@ -1,0 +1,9 @@
+# Use the official Python 3.8 image
+FROM python:3.8
+
+COPY . /backend
+WORKDIR /backend/api
+RUN pip install -r ./requirements.txt
+
+ENTRYPOINT ["python"]
+CMD ["app.py"]
